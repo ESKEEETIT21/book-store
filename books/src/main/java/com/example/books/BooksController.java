@@ -25,7 +25,7 @@ public class BooksController {
         Object books;
 
         response.put("Request", request.getMethod() + " /books");
-        response.put("Respone", null);
+        response.put("Response", null);
         response.put("Content-Type", "application/json");
         response.put("Status Code", HttpStatus.OK.value());
         response.put("payload", myBookAL);
@@ -40,7 +40,7 @@ public class BooksController {
         Map<String, Object> response = new LinkedHashMap<>();
 
         response.put("Request", request.getMethod() + " /books");
-        response.put("Respone", null);
+        response.put("Response", null);
         response.put("Content-Type", "application/json");
         response.put("Status Code", HttpStatus.OK.value());
         response.put("payload", myBookAL);
