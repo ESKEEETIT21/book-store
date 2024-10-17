@@ -1,16 +1,11 @@
-name: Check Internet Connection
-
+name: HTTP Status Check
 on:
   push:
-    branches:
-      - main
   workflow_dispatch:
-
 jobs:
-  check-internet:
+  check_http_status:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - run: |
-      curl https://www.google.de/
-      
+      - run: |
+          curl https://www.google.de/
