@@ -1,0 +1,22 @@
+name: Check Internet Connection
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-internet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test Internet Connection
+      run: |
+        if ping -c 1 8.8.8.8 &> /dev/null
+        then
+          echo "Internet connection is available."
+        else
+          echo "No internet connection."
+          exit 1
+        fi
