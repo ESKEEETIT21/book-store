@@ -1,0 +1,11 @@
+name: HTTP Status Check
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  check_http_status:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: |
+          curl https://www.google.de/
