@@ -14,7 +14,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class BooksController {
-
     private final AtomicLong counter = new AtomicLong();
     private ArrayList<Book> myBookAL = new ArrayList<>();
 
